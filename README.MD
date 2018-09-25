@@ -1,4 +1,4 @@
-# vimrc vim配置文件
+### vimrc vim配置文件
 ```
 sudo apt-get install vim  
 sudo apt-get install vim-gnome  
