@@ -15,3 +15,16 @@ cp vimrc/vimrc/.vimrc-xxx-xxx ~/.vimrc
 vim ~/.vimrc
 > :BundleInstall
 ```
+
+### 错误提示
+```
+Error detected while processing function <SNR>22_IndentGuidesToggle..indent_guides#toggle..indent_guides#enable..indent_guides
+#init_script_vars..indent_guides#capture_highlight:
+line    2:
+E411: highlight group not found: Normal
+Press ENTER or type command to continue
+```
+在配置文件中添加
+```
+colorscheme default
+```
