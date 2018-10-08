@@ -42,7 +42,10 @@ Plugin 'nathanaelkane/vim-indent-guides'  " 高亮显示行首缩进
 Plugin 'scrooloose/nerdcommenter' " 代码注释插件
 Plugin 'scrooloose/nerdtree' " 目录结构
 Plugin 'fholgado/minibufexpl.vim' " 快速浏览和操作Buffer
-Plugin 'vim-scripts/VimIM' " 基于Vim的嵌入式中文输入法
+Plugin 'Valloric/YouCompleteMe' " 补全工具
+Plugin 'mattn/emmet-vim'  " html自动补全
+
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -71,14 +74,6 @@ set hlsearch
 syntax enable
 " 允许用指定语法高亮配色方案替换默认方案
 syntax on
-if has('gui_running')
-    set background=light
-    colorscheme solarized
-    set guifont=DejaVu\ Sans\ mono\ 11
-else
-    set background=dark
-endif
-set linespace=6 " 调整行间距(只有gui才有效果)
 " 禁止光标闪烁
 set gcr=a:block-blinkon0
 " 禁止显示滚动条
@@ -205,6 +200,7 @@ let NERDTreeAutoDeleteBuffer=1
 " q       关闭 NerdTree 窗口
 " ?       切换是否显示 Quick Help
 
+
 " 快速浏览和操作Buffer -- 插件: MiniBufExplorer
 " :bn   打开当前buffer的下一个buffer
 " :bp   打开当前buffer的前一个buffer
@@ -212,6 +208,18 @@ let NERDTreeAutoDeleteBuffer=1
 " :ls    当前打开的buffer
 " :bd    删除buffer
 
+
 " 中文输入法  --  插件: VimIM
 " 快捷键  gi 直接输入
 " 或者输入后按Ctrl+^ 弹出选择菜单
+
+
+" emmet-vim html自动补全工具
+" 快捷键 <c-y>, (Ctrl+y ,)
+" 其他快捷键
+" <c-y>n：到下一个编辑点
+" <c-y>N：到上一个编辑点
+" <c-y>d：选中整个标签
+" <c-y>D：选中整个标签的内容
+" <c-y>k：删除当前标签
+" 实例 html:5_
